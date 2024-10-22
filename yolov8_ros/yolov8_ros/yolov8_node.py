@@ -108,7 +108,6 @@ class Yolov8Node(LifecycleNode):
         self.get_logger().info(f"[{self.get_name()}] Activating...")
 
         self.yolo = self.type_to_model[self.model_type](self.model)
-        self.yolo.fuse()
 
         # subs
         self._sub = self.create_subscription(
